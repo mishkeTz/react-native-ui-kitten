@@ -254,6 +254,12 @@ export class RkTabSet extends RkComponent {
 
   renderView = () => {
     const styles = super.defineStyles();
+
+    const tmp = {
+      ...styles.indicator,
+      backgroundColor: 'red'
+    }
+
     return (
       <View style={{ flex: 1 }}>
         <RkTabBar
@@ -267,7 +273,7 @@ export class RkTabSet extends RkComponent {
           {this.tabViews}
         </RkTabBar>
         <RkTabBarIndicator
-          style={styles.indicator}
+          style={tmp}
           ref={this.setIndicatorRef}
           itemCount={this.props.children.length}
           componentWidth={this.state.componentWidth}
