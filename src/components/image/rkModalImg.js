@@ -253,7 +253,7 @@ export class RkModalImg extends RkComponent {
     <TouchableWithoutFeedback
       style={{ flex: 1 }}
       onPress={this.onImageClicked}>
-      <Image source={source} {...props} />
+      <Image source={{uri: source}} {...props} />
     </TouchableWithoutFeedback>
   );
 
@@ -394,7 +394,7 @@ export class RkModalImg extends RkComponent {
           onPress={this.onRootViewClicked}>
           <Image
             style={[img, imgStyle]}
-            source={basicSource}
+            source={{uri: basicSource}}
             {...imgProps}
           />
         </TouchableWithoutFeedback>
